@@ -1,0 +1,12 @@
+{
+  "name": "mockedin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Gabriel Conceicao <gabrielcon6cao@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn --cwd web install && yarn --cwd web build",
+    "deploy": "cp -a web/build/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy"
+  }
+}
